@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    function carpimTablosu(timesTableNumber, baslangic, bitis) {
+        var sayi = [];
+        for (var i = 0; i <= (bitis - baslangic); i++) {
+            sayi[i] = baslangic + i;
+        }
+        var timesTable = [];
+
+        for (i = 0; i <= (bitis - baslangic); i++) {
+            timesTable[i] = sayi[i] * timesTableNumber;
+            document.write(timesTableNumber + " * " + sayi[i] + " = " + timesTable[i] + "<br />");
+        }
+    }
+
+
+    while (isNaN(kacicin)) {
+        var kacicin = Number(prompt("Kaç için çarpım tablosu oluşturulmasını istersin ? İptal için: -1 Yazın"));
+        if (kacicin == -1) {
+            break;
+        }
+        else if (isNaN(kacicin)) {
+            alert("Lütfen bir sayı giriniz");
+            continue;
+        }
+
+        while (isNaN(ilk)) {
+            var ilk = Number(prompt("Kaçla çarpmaya başlasın ? İptal için: -1 Yazın"));
+            if (ilk == -1) {
+                break;
+            }
+            else if (isNaN(ilk)) {
+                alert("Lütfen bir sayı giriniz");
+                continue;
+            }
+
+            while (isNaN(son)) {
+                var son = Number(prompt("Kaçla çarparak bitirsin ? İptal için: -1 Yazın"));
+                if (son == -1) {
+                    break;
+                }
+                else if (isNaN(son)) {
+                    alert("Lütfen bir sayı giriniz");
+                }
+            }
+
+        }
+
+    }
+
+
+    carpimTablosu(kacicin, ilk, son);
+
+</script>
+
+</body>
+</html>
